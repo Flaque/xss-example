@@ -14,7 +14,9 @@ let state = {
 };
 
 // Routes
-app.get("/", (req, res) => res.render("index", state));
+app.get("/", (req, res) =>
+  res.render("index", { messages: state.messages.reverse() })
+);
 app.post("/new", (req, res) => {
   if (req.body && req.body.text) {
     state.messages.push({
