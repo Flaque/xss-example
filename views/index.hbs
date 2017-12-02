@@ -1,0 +1,18 @@
+<html>
+
+<body>
+
+    <h1> Hi 👋🏻 Leave a message please. </h1>
+
+    <form action="/new" method="post">
+        <input name="text" autofocus />
+        <input type="submit" />
+    </form>
+
+    {{#messages}}
+    <p> {{{text}}} </p>
+    {{/messages}}
+
+</body>
+
+</html>
